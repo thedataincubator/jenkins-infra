@@ -4,7 +4,7 @@ Boolean isMasterBranch() {
 
 String cronString(String c) {
     if (isMasterBranch()) {
-        return 'c'
+        return c
     } else {
         return ''
     }
