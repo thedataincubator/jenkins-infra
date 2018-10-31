@@ -1,6 +1,6 @@
 def cleanDocker(String name = ''){
     if (name != ''){
-        sh("docker rmi $(docker images | grep ${name} | awk \'{print$3}\') || true")
+        sh("docker rmi \$(docker images | grep ${name} | awk '{print\$3}') || true")
     }
 }
 
