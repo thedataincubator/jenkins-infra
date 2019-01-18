@@ -16,10 +16,10 @@ void sendJenkins(boolean success, String s = '') {
         if (success){
             // don't send if not previously bad
             if (currentBuild.getPreviousBuild().result != 'SUCCESS'){
-                slackSend(color: "good", message: "Job: ${env.JOB_NAME} with buildnumber ${env.BUILD_NUMBER} is back to success ${env.BUILD_URL}\n $s")
+                slackSend(color: "good", message: "Job: ${env.JOB_NAME} with build number ${env.BUILD_NUMBER} is back to success ${env.BUILD_URL}\n $s")
             }
         } else { //send if not success
-            slackSend(color: "danger", message: "Job: ${env.JOB_NAME} with buildnumber ${env.BUILD_NUMBER} was not successful, ${env.BUILD_URL} \n $s")
+            slackSend(color: "danger", message: "Job: ${env.JOB_NAME} with build number ${env.BUILD_NUMBER} was not successful, ${env.BUILD_URL} \n $s")
         }
     }
 }
